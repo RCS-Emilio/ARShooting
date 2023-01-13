@@ -14,9 +14,10 @@ public class Points : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var topOne = PlayerPrefs.GetInt("One", 0);
-        var topTwo = PlayerPrefs.GetInt("Two", 0);
-        var topThree = PlayerPrefs.GetInt("Three", 0);
+        globalScore = 0;
+        topOne = PlayerPrefs.GetInt("One", 0);
+        topTwo = PlayerPrefs.GetInt("Two", 0);
+        topThree = PlayerPrefs.GetInt("Three", 0);
     }
 
     // Update is called once per frame
