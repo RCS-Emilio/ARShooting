@@ -26,11 +26,11 @@ public class ScoreControl : MonoBehaviour
         
     }
 
-    void loadScores(int score, TextMeshProUGUI text) {
+    void loadScores(int score, TextMeshProUGUI scoreText) {
         if (score == 0) {
-            text.text = "NO PLAYER";
+            scoreText.text = "NO PLAYER";
         } else {
-            text.text = "HIGHSCORE: " + score;
+            scoreText.text = "HIGHSCORE: " + score;
         }
     }
 }

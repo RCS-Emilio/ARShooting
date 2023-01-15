@@ -233,7 +233,6 @@ GameObject:
   - component: {fileID: 114489361866395698}
   - component: {fileID: 5406528053338450112}
   - component: {fileID: 6143024573984418832}
-  - component: {fileID: 5955164063332637777}
   - component: {fileID: 7817044018744594254}
   m_Layer: 3
   m_Name: StoneMonster
@@ -320,18 +319,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.86, y: 1, z: 1.179321}
   m_Center: {x: 0, y: 0.48, z: -0.09}
---- !u!114 &5955164063332637777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713781036754730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbcc2d5e8cc1be74888c21d685a94f18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7817044018744594254
 MonoBehaviour:
   m_ObjectHideFlags: 0

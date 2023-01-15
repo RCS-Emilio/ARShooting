@@ -11,10 +11,12 @@ public class Points : MonoBehaviour
     public TextMeshProUGUI score;
     public static int globalScore = 0;
     private int topOne, topTwo, topThree;
+
+    public TextMeshProUGUI finalScore;
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
-        globalScore = 0;
         topOne = PlayerPrefs.GetInt("One", 0);
         topTwo = PlayerPrefs.GetInt("Two", 0);
         topThree = PlayerPrefs.GetInt("Three", 0);
@@ -28,9 +30,7 @@ public class Points : MonoBehaviour
             DisplayTime(timeRemaining);
             score.text = globalScore.ToString();
         } else {
-            CompareScore(topOne, topTwo, topThree, globalScore);
-            PlayerPrefs.Save();
-            SceneManager.LoadScene("MainMenu");
+            StartCoroutine(GameEnd());
         }
     }
 
@@ -43,13 +43,12 @@ public class Points : MonoBehaviour
     public void CompareScore(int one, int two, int three, int newscore) {
         var auxOne = one;
         var auxTwo = two;
-        var auxThree = three;
 
 
         if (newscore >= one) {
             PlayerPrefs.SetInt("One", newscore);
             PlayerPrefs.SetInt("Two", auxOne);
-            PlayerPrefs.SetInt("One", auxTwo);
+            PlayerPrefs.SetInt("Three", auxTwo);
             return;
         }
 
@@ -64,6 +63,17 @@ public class Points : MonoBehaviour
             return;
         }
 
+
+
+    }
+
+    IEnumerator GameEnd() {
+        CompareScore(topOne, topTwo, topThree, globalScore);
+        PlayerPrefs.Save();
+        panel.SetActive(true);
+        finalScore.text = "TU PUNTUACIÓN FUE: " + globalScore.ToString();
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("MainMenu");
     }
 
 
