@@ -153,8 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1159780574}
-  arCamera: {fileID: 1826518308}
-  bullet: {fileID: 1000012964112300, guid: 5df3820e9cc3e434085b2e7781cf09ff, type: 3}
+  bullet: {fileID: 128999835445694821, guid: 5df3820e9cc3e434085b2e7781cf09ff, type: 3}
   shootForce: 700
 --- !u!4 &94829661
 Transform:
@@ -420,7 +419,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717949648}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 

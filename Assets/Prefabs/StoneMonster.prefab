@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 114489361866395698}
   - component: {fileID: 5406528053338450112}
   - component: {fileID: 6143024573984418832}
-  - component: {fileID: 7817044018744594254}
+  - component: {fileID: 8471900685798305021}
   m_Layer: 3
   m_Name: StoneMonster
   m_TagString: monster
@@ -319,7 +319,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.86, y: 1, z: 1.179321}
   m_Center: {x: 0, y: 0.48, z: -0.09}
---- !u!114 &7817044018744594254
+--- !u!114 &8471900685798305021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab73e60aee0291428c9d21f99d1ef08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToLive: 7
+  TimeToLive: 10
 --- !u!1 &1753159918419610
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lifetime : MonoBehaviour {
     public float TimeToLive = 3f;
-    private void Start() {
+     void Start() {
         Destroy(gameObject, TimeToLive);
     }
 }

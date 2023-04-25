@@ -9,18 +9,18 @@ public class BulletCollider : MonoBehaviour
     public AudioSource cristal;
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision) {
-        if (collision.transform.tag == "monster") {
+        if (collision.gameObject.tag == "monster") {
             dead.Play();
             Points.globalScore += 10;
-            Destroy(collision.transform.gameObject);
+            Destroy(collision.gameObject);
             var smokeEffectMonster =  Instantiate(smoke, collision.transform.position, collision.transform.rotation);
             Destroy(smokeEffectMonster, 3f);
         }
 
-        if (collision.transform.tag == "jewel") {
+        if (collision.gameObject.tag == "jewel") {
             cristal.Play();
             Points.globalScore -= 10;
-            Destroy(collision.transform.gameObject);
+            Destroy(collision.gameObject);
             var smokeEffectJewel = Instantiate(smoke, collision.transform.position, collision.transform.rotation);
             Destroy(smokeEffectJewel, 3f);
         }
